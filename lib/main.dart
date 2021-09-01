@@ -4,8 +4,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() => runApp(
-    MaterialApp(debugShowCheckedModeBanner: false, home: WebViewExample()));
+void main() {
+  runApp(
+      MaterialApp(debugShowCheckedModeBanner: false, home: WebViewExample()));
+}
 
 class EmptyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -63,12 +65,6 @@ class _WebViewExampleState extends State<WebViewExample> {
         );
       }),
       /*bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-            print(index); // デバッグ用にprintしてみる
-          });
-        },
         //currentIndex: _currentIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
